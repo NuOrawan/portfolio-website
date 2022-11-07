@@ -14,6 +14,7 @@
   --white: #FFF;
   --blue: #4120A9;
   --black: #000;
+  --red: #FF0000;
   /*Font weight variables for headings*/
   --heading-weight: 700; 
  /*Font weight variables*/
@@ -35,7 +36,7 @@
  }
 body {
   font-family: 'Lato', sans-serif;
-  color: var(--light-grey);
+  color: var(--dark-grey);
   font-weight: var(--text-weight);
   font-size: var(--font-size-default);
   line-height: 1.6;
@@ -59,6 +60,15 @@ h3 {
   font-size: var(--font-size-2);
   font-weight: var(--heading-weight);
 }
+.highlight{
+    color: var(--purple);
+    font-weight: var(--heading-weight);
+}
+.textbg{
+    background-color: var(--pewter);
+    padding: 0 5px;
+}
+
 a{
     color: var(--dark-grey);
     text-decoration: none;
@@ -100,13 +110,35 @@ button:hover, button:focus , .button:hover, .button:focus{
   opacity: 0.8;
   color: var(--black);
 }
+.button-container { 
+  height: 70px;
+  position: relative;
+  border: none; 
+}
+
+.horizontal-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#content {
+  margin: 1em auto;
+  width: 90%;
+  margin-bottom: 10px;
+  
+}
 /* Flexbox layout for header bar*/
 /* Header setting*/
+
 .page-header{
     display: flex;
     width: 100%;
-    border-bottom: 1px solid var(--dark-grey);
     margin: auto;
+    box-shadow: 0 4px 10px -10px var(--black);
+   
 }
 .page-header__item{
     flex: 0 1 200px;
@@ -134,9 +166,24 @@ button:hover, button:focus , .button:hover, .button:focus{
 .logo{
     margin-top: 15px;
     height: 50px;
-    width: 90px;
+    width: 100px;
     
 }
+.right{
+    float : right;
+    padding: 5px;
+}
+.left{
+    float: left;
+    margin-left: 5px;
+    padding: 5px;
+}
+.center{
+    text-align: center;
+}
+.nobull {
+  list-style-type: none;
+ }
 /*Link setting*/
 .link {
   text-decoration-line: underline;
@@ -161,6 +208,105 @@ button:hover, button:focus , .button:hover, .button:focus{
 .seattle{
     animation: 4s color-change infinite alternate linear;
 }
+
+/*Form style*/
+.form-style{
+	max-width: 500px;
+	padding: 10px 12px 10px 10px;
+        border-radius: 5px;
+	background-color: var(--pewter);
+        border: var(--dark-grey);
+        margin-bottom: 15px;
+}
+.form-style label{
+	display: block;
+	margin: 0px 0px 15px 0px;
+}
+.form-style label > span{
+	width: 100px;
+	font-weight: bold;
+	float: left;
+	padding-top: 8px;
+	padding-right: 5px;
+}
+.form-style span.required{
+	color: var(--red);
+}
+.form-style .tel-number-field{
+	width: 40px;
+	text-align: center;
+}
+.form-style input.input-field, .form-style{
+	width: 48%;	
+}
+.form-style input.input-field, 
+.form-style .tel-number-field, 
+.form-style .textarea-field{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1px solid var(--dark-grey);
+	box-shadow: 1px 1px 4px var(--dark-grey);
+	-moz-box-shadow: 1px 1px 4px var(--dark-grey);
+	-webkit-box-shadow: 1px 1px 4px var(--dark-grey);
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	padding: 7px;
+	outline: none;
+}
+.form-style .input-field:focus, 
+.form-style .tel-number-field:focus, 
+.form-style .textarea-field:focus,  
+
+.form-style .textarea-field{
+	height:100px;
+	width: 55%;
+}
+/*Experience*/
+.experience-layout {
+  display: grid;
+  grid-template-columns: 30% auto;
+  grid-column-gap: 2%;
+}
+.work-experiences {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  background-color: var(--pewter);
+  border-radius: 8px;
+  padding: 2%;
+ }
+ .experience-logo {
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      height: 20vh;
+      background-color: none;
+  }
+  .experience-logo img {
+    border-radius: 50%;
+  }
+.title {
+    font-size: var(--font-size2);
+    font-weight: bold;
+  }
+ hr {
+    margin-top: 2%;
+    border-color: var(--dark-grey);
+  }
+
+ .description {
+    margin: 1%;
+    font-size: var(--font-size1);
+ 
+  }
+  .meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2%;
+  }
+  
+  
 @keyframes color-change {
   from {
     fill: var(--purple);
@@ -179,14 +325,18 @@ button:hover, button:focus , .button:hover, .button:focus{
     border-top: 1px solid var(--dark-grey);
     margin-top: 5px;
 }
-/*Project list/Grid setting*/
+/*Project list Grid setting*/
+.horizontal-border{
+    
+    padding: 26px 0px 30px;
+    border-top: 1px solid var(--light-grey);
+}
 .project-list{    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
 }
 .project-list__item{
-    background-color: var(--pewter);
     padding: 10px;
 }
 /* Setting for screen size less than 500pixel*/
