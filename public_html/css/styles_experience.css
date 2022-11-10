@@ -132,10 +132,8 @@ button:hover, button:focus , .button:hover, .button:focus .block:hover, block:fo
   width: 90%;
   margin-bottom: 10px;
   overflow: auto;
-  border: 1px solid black;
   
 }
-/*Contact page setting*/
 #contact-container {
     width: 95%; 
     height: auto;
@@ -146,9 +144,8 @@ button:hover, button:focus , .button:hover, .button:focus .block:hover, block:fo
     
 }
 
-/* Header setting*/
 /* Flexbox layout for header bar*/
-
+/* Header setting*/
 
 .page-header{
     display: flex;
@@ -215,18 +212,18 @@ button:hover, button:focus , .button:hover, .button:focus .block:hover, block:fo
 /* Setting for portrait*/
 .profile__portrait{
     float: left;
-    
-    max-width: 50vh;
+    wxidth: 250px;
+    max-width: 50vp;
     height: auto;
     margin-right: 40px;
     border-radius: 50%;
-}   
-/*Animation of Seattle letter in About page*/
+    border: 1px solid black;
+}
 .seattle{
     animation: 4s color-change infinite alternate linear;
 }
 
-/*Contact form style*/
+/*Form style*/
 .form-style{
         width:95%;
 	max-width: 500px;
@@ -284,27 +281,23 @@ button:hover, button:focus , .button:hover, .button:focus .block:hover, block:fo
 	height:100px;
 	width: 80%;
 }
-/*Submit button setting*/
 .block {
   display: block;
   width: 100%;
   text-align: center;
 }
 
-/* Animation Setting
-*/
-.seattle{
-    animation: 4s color-change infinite alternate linear;
-}
+/*Animate color of letters*/
+
+  
 @keyframes color-change {
   from {
-    fill: #b200ff;
+    fill: var(--purple);
   }
   to {
-    fill: #f76414;
+    fill: var(--black);
   }
 }
-
 /*Experience page with grid setting*/
 
 .experience-grid{
@@ -346,7 +339,6 @@ main .experience-logo {
       justify-items: center;
       height: 20vh;
       width: 100%;
-      padding: 2px;
       
  
   }
@@ -435,7 +427,7 @@ hr {
  
 }
 /*For screen size minimum of 700px*/
-@media screen and (min-width:700px){
+@media screen and (min-width:750px){
 .experience-grid{
 max-width: 960px;
 display: grid;

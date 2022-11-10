@@ -4,8 +4,6 @@
 * Autoprefixer: v10.4.7
 * Browsers: last 2 version
 */
-
-
 :root {
     /* Font and background color variables*/
   /*Font weight variables for headings*/ 
@@ -360,13 +358,13 @@ button:focus{
               align-items: center;
       justify-items: center;
       height: 20vh;
-      background-color: none;
+  
   }
   .experience-logo img {
     border-radius: 50%;
   }
 .title {
-    font-size: undefined;
+    font-size: 1.2em;
     font-weight: bold;
   }
  hr {
@@ -376,7 +374,7 @@ button:focus{
 
  .description {
     margin: 1%;
-    font-size: undefined;
+    font-size: 1em;
  
   }
   .meta {

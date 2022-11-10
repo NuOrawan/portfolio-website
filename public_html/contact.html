@@ -4,13 +4,13 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<html  lang="en">
     <head>
         <title>Contact : Orawan Anuntakul</title>
         <link rel="shortcut icon" href="./img/favicon/favicon.ico">
         <link rel="stylesheet" type="text/css" href="./css/normalize.css">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="./css/style.production.css">
+        <link rel="stylesheet" type="text/css" href="./css/styles.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -30,27 +30,27 @@ and open the template in the editor.
         </nav>
     </header>
     <main id="content">
-        <section>
-            <h1>Contact</h1>
+        
+        <h1>Contact</h1>
+            <div id="contact-container">
+             
             <h2>Get in Touch</h2>     
                 <div class="form-style left">
-                <form action="" method="post">
-                <label class="standard-label" for="field1"><span>Name <span class="required">*</span></span>
-                <input type="text" class="input-field" name="field1" value="" /></label>
-                <label for="field2"><span>Email <span class="required">*</span></span>
-                <input type="text" class="input-field" name="field2" value="" /></label>
-                <label><span>Telephone</span>
-                <input type="text" class="tel-number-field" name="tel_no_1" value="" maxlength="3" />
-                -<input type="text" class="tel-number-field" name="tel_no_2" value="" maxlength="3"  />
-                -<input type="text" class="tel-number-field" name="tel_no_3" value="" maxlength="4"  />
-                </label>
-                <label for="field5"><span>Message <span class="required">*</span></span>
-                <textarea name="field5" class="textarea-field" maxlength="240" placeholder="Max 240 character"></textarea></label>
-                <label><span> </span><button type="button" value="Submit">Submit</button></label>
+                <form action="action_page.php" method="post">
+                <label for="field1"><span>Name <span class="required">*</span></span></label>
+                <input type="text" id="field1" class="input-field" name="field1" value="">
+                <label for="field2"><span>Email <span class="required">*</span></span></label>
+                <input type="text" id="field2" class="input-field" name="field2" value="">
+                <label for="field3"><span>Phone</span></label>
+                <input type="text" id="field3" class="input-field" name="field3" value="" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                <label for="field4"><span>Message <span class="required">*</span></span></label>
+                <textarea name="field4"  id="field4" class="textarea-field" maxlength="240" placeholder="Max 240 character"></textarea>
+               
+                <button class="block" type="button" value="Submit">Submit</button>
+                
                 </form>
                 </div>
-        </section>
-        <section>
+            
                 <div class="left">
                 <h2>Orawan Anuntakul</h2>
                 <p>
@@ -62,16 +62,18 @@ and open the template in the editor.
                 <!--Email-->
                 <p>
                     <b>E-mail:</b><br>
-                    <a href="mailto:orawan@orawandeveloper.com" title="email">orawan@orawandeveloper.com</a>
+                    <a href="mailto:orawan@orawanseattle.com" title="email">orawan@orawanseattle.com</a>
                 </p>
                 <!--Website-->
                 <p>
                     <b>Website:</b><br>
-                    <a href="#" title="website">www.orawandeveloper.com</a>
+                    <a href="http://www.orawanseattle.com" title="website">www.orawanseattle.com</a>
                 </p>
-                </div>   
+                </div>  
 
-        </section> 
+           
+            
+            </div>
     </main>    
     <footer class="page-footer">
         <p>Find me on</p>
