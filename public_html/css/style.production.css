@@ -4,6 +4,8 @@
 * Autoprefixer: v10.4.7
 * Browsers: last 2 version
 */
+
+
 :root {
     /* Font and background color variables*/
   /*Font weight variables for headings*/ 
@@ -51,6 +53,9 @@ h3 {
     background-color: #E9EAEC;
     padding: 0 5px;
 }
+.centered{
+    text-align: center;
+}
 
 a{
     color: #6F7378;
@@ -80,7 +85,7 @@ a:active{
     color: #6F7378;
 }
 button {
-  /* overwrites browser defaults and resets the border */
+  /* overwrite browser defaults and reset the border */
   border: none;
   display: inline-block;
   /* takes the font from the outer container */
@@ -98,7 +103,7 @@ button {
   transition: 0.2s opacity;
 }
 .button {
-  /* overwrites browser defaults and resets the border */
+  /* overwrite browser defaults and reset the border */
   border: none;
   display: inline-block;
   /* takes the font from the outer container */
@@ -136,7 +141,14 @@ button:focus{
   opacity: 0.8;
   color: #000;
 }
-.button:focus{
+.button:focus .block:hover{
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+  color: #000;
+}
+block:focus{
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
   /* reduces the opacity of the button to 80% */
@@ -154,17 +166,33 @@ button:focus{
   position: absolute;
   top: 50%;
   left: 50%;
+  
   -webkit-transform: translate(-50%, -50%);
+  
           transform: translate(-50%, -50%);
 }
 #content {
   margin: 1em auto;
   width: 90%;
   margin-bottom: 10px;
+  overflow: auto;
+ 
   
 }
-/* Flexbox layout for header bar*/
+/*Contact page setting*/
+#contact-container {
+    width: 95%; 
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    overflow: auto;
+    
+}
+
 /* Header setting*/
+/* Flexbox layout for header bar*/
+
 
 .page-header{
     display: -webkit-box;
@@ -216,11 +244,9 @@ button:focus{
 .left{
     float: left;
     margin-left: 5px;
-    padding: 5px;
+   
 }
-.center{
-    text-align: center;
-}
+
 .nobull {
   list-style-type: none;
  }
@@ -242,168 +268,208 @@ button:focus{
 /* Setting for portrait*/
 .profile__portrait{
     float: left;
-    width: 250px;
+    
+    max-width: 50vh;
     height: auto;
     margin-right: 40px;
     border-radius: 50%;
-}
+}   
+/*Animation of Seattle letter in About page*/
 .seattle{
     -webkit-animation: 4s color-change infinite alternate linear;
             animation: 4s color-change infinite alternate linear;
 }
 
-/*Form style*/
+/*Contact form style*/
 .form-style{
+        width:95%;
 	max-width: 500px;
 	padding: 10px 12px 10px 10px;
         border-radius: 5px;
 	background-color: #E9EAEC;
         border: #6F7378;
         margin-bottom: 15px;
+        
 }
 .form-style label{
 	display: block;
+        width: 100px;
+        
 	margin: 0px 0px 15px 0px;
+        padding-left: 5px;
+        
 }
 .form-style label > span{
 	width: 100px;
+        
 	font-weight: bold;
 	float: left;
 	padding-top: 8px;
 	padding-right: 5px;
+        
 }
 .form-style span.required{
 	color: #FF0000;
 }
-.form-style .tel-number-field{
-	width: 40px;
-	text-align: center;
-}
-.form-style input.input-field, .form-style{
-	width: 48%;	
+
+.form-style input.input-field {
+	width: 80%;
+        
 }
 .form-style input.input-field{
-	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	
 	border: 1px solid #6F7378;
-	box-shadow: 1px 1px 4px #6F7378;
-	-moz-box-shadow: 1px 1px 4px #6F7378;
 	-webkit-box-shadow: 1px 1px 4px #6F7378;
+	        box-shadow: 1px 1px 4px #6F7378;
+	
 	border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	padding: 7px;
+	
+	padding: 7px 7px 7px 5px;
 	outline: none;
-}
-.form-style .tel-number-field{
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	border: 1px solid #6F7378;
-	box-shadow: 1px 1px 4px #6F7378;
-	-moz-box-shadow: 1px 1px 4px #6F7378;
-	-webkit-box-shadow: 1px 1px 4px #6F7378;
-	border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	padding: 7px;
-	outline: none;
+        
 }
 .form-style .textarea-field{
-	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	
 	border: 1px solid #6F7378;
-	box-shadow: 1px 1px 4px #6F7378;
-	-moz-box-shadow: 1px 1px 4px #6F7378;
 	-webkit-box-shadow: 1px 1px 4px #6F7378;
+	        box-shadow: 1px 1px 4px #6F7378;
+	
 	border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	padding: 7px;
+	
+	padding: 7px 7px 7px 5px;
 	outline: none;
+        
 }
 .form-style .input-field:focus, 
-.form-style .tel-number-field:focus, 
 .form-style .textarea-field:focus,  
 
 .form-style .textarea-field{
 	height:100px;
-	width: 55%;
+	width: 80%;
 }
-/*Experience*/
-.experience-layout {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 30% 2% auto;
-  grid-template-columns: 30% auto;
-  grid-column-gap: 2%;
+/*Submit button as block setting*/
+.block {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
-.work-experiences {
-  -ms-grid-column: 2;
-  grid-column: 2;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1 / span 2;
-  background-color: #E9EAEC;
-  border-radius: 8px;
-  padding: 2%;
- }
- .experience-logo {
-      display: -ms-grid;
-      display: grid;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      justify-items: center;
-      height: 20vh;
-  
-  }
-  .experience-logo img {
-    border-radius: 50%;
-  }
-.title {
-    font-size: 1.2em;
-    font-weight: bold;
-  }
- hr {
-    margin-top: 2%;
-    border-color: #6F7378;
-  }
 
- .description {
-    margin: 1%;
-    font-size: 1em;
- 
-  }
-  .meta {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 2%;
-  }
-  
-  
+/* Animation Setting*/
+.seattle{
+    -webkit-animation: 4s color-change infinite alternate linear;
+            animation: 4s color-change infinite alternate linear;
+}
 @-webkit-keyframes color-change {
   from {
     fill: #b200ff;
   }
   to {
-    fill: #000;
+    fill: #f76414;
   }
 }
-  
-  
 @keyframes color-change {
   from {
     fill: #b200ff;
   }
   to {
-    fill: #000;
+    fill: #f76414;
   }
 }
+/*Experience page setting*/
+.experience {
+    
+  max-width: 960px;  
+  display: -ms-grid;  
+  display: grid;
+  -ms-grid-columns: 1fr 2px 1fr 2px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+  grid-gap: 2px;
+  margin:0 auto;
+  -ms-grid-rows: auto 2px auto 2px auto 2px auto;
+      grid-template-areas:
+    "photo name name "
+    "skills work workt"
+    "achievements work work"
+    "citizenships work work";
+}
+.name {
+  -ms-grid-row : 1;
+  -ms-grid-column : 3;
+  -ms-grid-column-span : 3;
+  grid-area : name;
+}
+
+.photo {
+  -ms-grid-row : 1;
+  -ms-grid-column : 1;
+  grid-area : photo;
+  text-align: center;
+  
+}
+.photo > img {
+    border-radius: 50%;
+    height: auto;
+    width: 137px;
+    max-width:90%;
+    max-height:90%;
+    margin: 1px;
+   
+
+  }
+.about {
+  grid-area : about;
+}
+.work {
+  -ms-grid-row : 3;
+  -ms-grid-row-span : 5;
+  -ms-grid-column : 3;
+  -ms-grid-column-span : 3;
+  grid-area : work;
+  background-color: #E9EAEC;
+  border-radius: 8px;
+  padding: 2%;
+}
+.skills {
+  -ms-grid-row : 3;
+  -ms-grid-column : 1;
+  grid-area : skills;
+}
+.achievements {
+  -ms-grid-row : 5;
+  -ms-grid-column : 1;
+  grid-area : achievements;
+}
+.citizenship {
+  grid-area : citizenship;
+}
+.title {
+    
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+hr {
+    margin-top: 2%;
+    border-color: #6F7378;
+}
+.description .self-title{
+    margin: 1%;
+    padding-right: 1%;
+    font-size: 1em;
+ 
+}
+.meta {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2%;
+}
+
 
 /* Footer setting*/
 .page-footer{
@@ -435,12 +501,95 @@ button:focus{
 .project-list__item{
     padding: 10px;
 }
+
+@media all and (min-width: 750px) {
+  .experience {
+    -ms-grid-columns: 1fr 2px 1fr 2px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;  
+    -ms-grid-rows: auto 2px auto 2px auto 2px auto;  
+        grid-template-areas:
+      "photo name name"
+      "skills work work"
+      "achievements work work"
+      "citizenship work work";
+  }
+  .name {
+        -ms-grid-row : 1;
+        -ms-grid-column : 3;
+        -ms-grid-column-span : 3;
+  }
+  .photo {
+        -ms-grid-row : 1;
+        -ms-grid-column : 1;
+  }
+  .work {
+        -ms-grid-row : 3;
+        -ms-grid-row-span : 5;
+        -ms-grid-column : 3;
+        -ms-grid-column-span : 3;
+  }
+  .skills {
+        -ms-grid-row : 3;
+        -ms-grid-column : 1;
+  }
+  .achievements {
+        -ms-grid-row : 5;
+        -ms-grid-column : 1;
+  }
+  .citizenship {
+        -ms-grid-row : 7;
+        -ms-grid-column : 1;
+  }
+}
+@media all and (max-width: 750px) {
+  .experience {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      -ms-grid-rows: auto 2px auto 2px auto 2px auto 2px auto 2px auto;
+          grid-template-areas:
+        "photo"
+        "name"
+        "skills"
+        "achievements"
+        "work"
+        "citizenship"
+    }
+  .name {
+        -ms-grid-row : 3;
+        -ms-grid-column : 1;
+        -ms-grid-column-span : 1
+    }
+  .photo {
+        -ms-grid-row : 1;
+        -ms-grid-column : 1
+    }
+  .work {
+        -ms-grid-row : 9;
+        -ms-grid-row-span : 1;
+        -ms-grid-column : 1;
+        -ms-grid-column-span : 1
+    }
+  .skills {
+        -ms-grid-row : 5;
+        -ms-grid-column : 1
+    }
+  .achievements {
+        -ms-grid-row : 7;
+        -ms-grid-column : 1
+    }
+  .citizenship {
+        -ms-grid-row : 11;
+        -ms-grid-column : 1
+    }
+}
 /* Setting for screen size less than 500pixel*/
 @media all and (max-width: 500px) {
-  .project-list {
+  .project-list{
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;  
   }  
+   
+  
 }
 /* Setting for screen size between 500pixel and 750px*/
 @media all and (min-width: 500px) and (max-width: 750px){
@@ -448,6 +597,7 @@ button:focus{
     -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr; 
   }  
+  
 }
 /* Setting for screen size up to 750px*/
 @media all and (max-width: 750px) {
@@ -461,4 +611,6 @@ button:focus{
   h1 {
     font-size: 1.728em;
   }
+  
+ 
 }
