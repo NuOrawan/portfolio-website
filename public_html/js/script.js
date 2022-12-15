@@ -3,6 +3,7 @@
     let form = document.querySelector("#contact-form");
     let nameInput = document.querySelector("#name");
     let emailInput = document.querySelector("#email");
+    let phoneInput = document.querySelector("#phone");
     let messageInput = document.querySelector("#message");
     //Show error message
     function showErrorMessage(input,message){
@@ -59,6 +60,35 @@
         showErrorMessage(emailInput, null);
         return true;
     }
+    //Validate phone number
+    function validatePhone(){
+        let value = phoneInput.value;
+        let phoneNo = /^\d{10}$/;
+        let phoneNoSpecial = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+        //If phone input field has value
+        if (value.length > 0){
+            console.log(value);
+            /*Validate a phone number of 10 digits either with no comma, no spaces, no punctuation and no + sign in front the number
+             *  or phone number with space , - or . For example 222-055-9034, 321.789.4512 or 123 256 4587.*/ 
+            if ((value.match(phoneNo)) || (value.match(phoneNoSpecial)) ){
+                console.log("It has 10 digits");
+                showErrorMessage(phoneInput, null);
+                return true;
+            } else {
+                showErrorMessage(phoneInput, "Please enter valid phone numbers.");
+                return false;
+            }
+            if (value.length < 10){
+                showErrorMessage(phoneInput, "You must enter area code and phone numbers.");
+                return false;
+            }
+        } else {
+            //Phone input field is not required and does not have value. 
+            showErrorMessage(phoneInput, null);
+                return true;
+            
+        }
+    }
   
     //Validate message. Message should not be empty and less than 240 characters.
     function validateMessage(){
@@ -79,8 +109,9 @@
     function validateForm(){
         let isValidName = validateName();
         let isValidEmail = validateEmail();
+        let isValidPhone = validatePhone();
         let isValidMessage = validateMessage();
-        return isValidName && isValidEmail && isValidMessage;
+        return isValidName && isValidEmail && isValidPhone && isValidMessage;
     }
     form.addEventListener("submit", (e)=> {
         e.preventDefault() //Do not submit to the server
@@ -90,5 +121,6 @@
     } );
     nameInput.addEventListener("input", validateName);
     emailInput.addEventListener("input", validateEmail);
+    phoneInput.addEventListener("input", validatePhone);
     messageInput.addEventListener("input", validateMessage);
 })();
