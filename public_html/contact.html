@@ -36,20 +36,30 @@ and open the template in the editor.
              
             <h2>Get in Touch</h2>     
                 <div class="form-style left">
-                <form action="action_page.php" method="post">
-                <label for="field1"><span>Name <span class="required">*</span></span></label>
-                <input type="text" id="field1" class="input-field" name="field1" value="">
-                <label for="field2"><span>Email <span class="required">*</span></span></label>
-                <input type="text" id="field2" class="input-field" name="field2" value="">
-                <label for="field3"><span>Phone</span></label>
-                <input type="text" id="field3" class="input-field" name="field3" value="" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-                <label for="field4"><span>Message <span class="required">*</span></span></label>
-                <textarea name="field4"  id="field4" class="textarea-field" maxlength="240" placeholder="Max 240 character"></textarea>
-               
-                <button class="block" type="button" value="Submit">Submit</button>
-                
+                <form id="contact-form">
+                    <div class ="input-wrapper">
+                        <label for="name"><span>Name <span class="required">*</span></span></label>
+                        <input id="name" class="input-field">
+                    </div>
+                    <div class ="input-wrapper">
+                        <label for="email"><span>Email <span class="required">*</span></span></label>
+                        <input id="email" class="input-field">
+                    </div>
+                    <div class ="input-wrapper">
+                        <label for="phone"><span>Phone</span></label>
+                        <input id="phone" class="input-field">
+                    </div>
+                    <div class ="input-wrapper">
+                        <label for="message"><span>Message (Max 240 character) <span class="required">*</span></span></label>
+                        <textarea id="message" class="textarea-field" maxlength="240"></textarea>
+                    </div>
+                        <button class="block">Submit</button>
+                        <!--<button class="block" type="button" value="Submit">Submit</button>-->
+                   
                 </form>
+                 
                 </div>
+                <script src="js/script.js"></script>   
             
                 <div class="left">
                 <h2>Orawan Anuntakul</h2>
@@ -95,5 +105,7 @@ and open the template in the editor.
             </a>
         </div>    
     </footer>
+    
     <script src="js/tota11y.min.js"></script>
+    
 </html>

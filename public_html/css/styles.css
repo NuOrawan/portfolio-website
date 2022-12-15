@@ -227,6 +227,9 @@ button:hover, button:focus , .button:hover, .button:focus .block:hover, block:fo
 }
 
 /*Contact form style*/
+.input-wrapper {
+    margin-bottom: 10px;
+}
 .form-style{
         width:95%;
 	max-width: 500px;
@@ -240,13 +243,13 @@ button:hover, button:focus , .button:hover, .button:focus .block:hover, block:fo
 .form-style label{
 	display: block;
         width: 100px;
-        
 	margin: 0px 0px 15px 0px;
         padding-left: 5px;
         
+        
 }
 .form-style label > span{
-	width: 100px;
+	width: 250px;
         
 	font-weight: bold;
 	float: left;
@@ -275,12 +278,16 @@ button:hover, button:focus , .button:hover, .button:focus .block:hover, block:fo
 	outline: none;
         
 }
-.form-style .input-field:focus, 
-.form-style .textarea-field:focus,  
+
 
 .form-style .textarea-field{
 	height:100px;
 	width: 80%;
+}
+/* Error message of form validation*/
+.error-message{
+    color : var(--red);
+    font-size: var(--font-size-1);
 }
 /*Submit button as block setting*/
 .block {
